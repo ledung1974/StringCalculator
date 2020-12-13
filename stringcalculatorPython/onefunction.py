@@ -31,6 +31,17 @@ def stringAdd(str):
     
     return sum
 
+# Test with multiple-lines string
+str = '''//#,@,***
+1@2@
+4#3***
+5'''
+print("String to add:",str)
+str = str.replace("\n","\\n")
+print("Result:",stringAdd(str))
+
+#Test with string input from console
 inputString = input("Enter String to calculate:")
 print("Input String:", inputString)
 print("Result:",stringAdd(inputString))
+

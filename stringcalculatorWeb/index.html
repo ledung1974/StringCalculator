@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String Calculate</title>
+    <link rel="stylesheet" href="./style.css">
+    <script type="module">
+        import { handleClick, generalAdd } from "./myscript.js";
+        import { testRun } from "./test.js";
+        window.handleClick = handleClick; //Module must assign to window function 
+        window.generalAdd = generalAdd;
+        window.testRun = testRun;
+    </script>
+</head>
+
+<body onLoad="testRun()">
+    <div class="container">
+        <h1>String Calculator with Add function:</h1>
+        <input id="string_input" type="text" placeholder="Type input string here then click Run">
+        <button type="button" onclick="handleClick()">Run</button>
+        <p>Result: <span id="result_output">?</span></p>
+    </div>
+    <div id="test-container">
+        <h1>Here is run all testcases in (testcases.js):</h1>
+        <!-- Test.js will generate the testcases results here --> 
+    </div>
+
+</body>
+
+</html>

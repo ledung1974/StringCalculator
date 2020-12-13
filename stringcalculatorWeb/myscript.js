@@ -44,7 +44,7 @@ function processingDelimiters(str){
         const endDelimiters = str.indexOf("\n");
         let delimitersString = str.slice(2,endDelimiters); 
         let delimitersArray = delimitersString.split(/,/);
-        str = str.slice(endDelimiters);
+        str = str.slice(endDelimiters+1);
         delimitersArray.forEach(element => {
             str = str.replaceAll(element,",");
         });

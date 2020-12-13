@@ -38,7 +38,7 @@ function processingDelimiters(str){
         str = str.replace(/\*|\+|\%|\$|\^|\//g,"&");//Can add more
         let delimitersString = str.slice(2,endDelimiters); 
         let delimitersArray = delimitersString.split(/,/);
-        str = str.slice(endDelimiters);
+        str = str.slice(endDelimiters+1);
         delimitersArray.forEach(element => {
             let replacer = new RegExp(element,'g')
             str = str.replace(replacer,",");

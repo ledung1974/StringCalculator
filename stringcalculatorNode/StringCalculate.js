@@ -35,7 +35,7 @@ function simpleAdd(str) {
 function processingDelimiters(str){
     if (str.substr(0, 2) === "//"){
         const endDelimiters = str.indexOf("\n");
-        str = str.replace(/\*|\+|\-|\%|\$|\^|\//g,"&");//Can add more
+        str = str.replace(/\*|\+|\%|\$|\^|\//g,"&");//Can add more
         let delimitersString = str.slice(2,endDelimiters); 
         let delimitersArray = delimitersString.split(/,/);
         str = str.slice(endDelimiters);
